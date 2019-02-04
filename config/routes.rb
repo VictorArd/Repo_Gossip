@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   get 'team', to: 'static_pages#team'
 
   get 'contact', to: 'static_pages#contact'
+  post 'contact', to: 'static_pages#contact_post'
 
   get 'welcome/:name', to: 'bienvenue#user'
 
