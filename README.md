@@ -13,7 +13,8 @@
       <li>Une page de bienvenue cachée</li>
     </ul>
 
-  
+  <br>
+
   <li>Réalisé ou non réalisé:</li>
     <ul>
       <li>Création de la base de l'application | OK |</li>
