@@ -1,8 +1,7 @@
 class StaticPagesController < ApplicationController
   
   def accueil
-    @title = Potin.first
-    @content = Potin
+    @potins = Potin.all
   end
 
   def team

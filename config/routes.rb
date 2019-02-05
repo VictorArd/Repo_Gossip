@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   post 'contact', to: 'static_pages#contact_post'
 
   get 'welcome/:name', to: 'bienvenue#user'
-
+  get 'potin/:id', to: 'potin#show', as: 'potin'
+  get 'user/:id', to: 'user#show', as: 'user'
 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
