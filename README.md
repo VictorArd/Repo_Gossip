@@ -15,20 +15,20 @@
 
   <br>
 
-  <li>Réalisé ou non réalisé:</li>
+  <li>Lundi:</li>
     <ul>
-      <li>Création de la base de l'application | OK |</li>
-      <li>Page de contact | OK |</li>
-      <li>Page team | OK |</li>
-      <li>Ajout de bootstrap | OK |</li>
-      <li>Ajout d'un header bootstrap sur chaque page | OK |</li>
-      <li>Liens dans le header | OK |</li>
-      <li>Page bienvenue avec url cachée | OK |</li>
-      <li>Page d'accueil | OK |</li>
-      <li>Liste des potins sur page d'accueil | NON |</li>
-      <li>Afficher un potin | NON |</li>
-      <li>Afficher un utilisateur | NON |</li>
-      <li>Joli display | NON |</li>
+      <li>Création de la base de l'application</li>
+      <li>Page de contact</li>
+      <li>Page team</li>
+      <li>Ajout de bootstrap</li>
+      <li>Ajout d'un header bootstrap sur chaque page</li>
+      <li>Liens dans le header</li>
+      <li>Page bienvenue avec url cachée</li>
+      <li>Page d'accueil</li>
+      <li>Liste des potins sur page d'accueil</li>
+      <li>Afficher un potin</li>
+      <li>Afficher un utilisateur</li>
+      <li>Joli display</li>
     </ul>
 </ul>
 
