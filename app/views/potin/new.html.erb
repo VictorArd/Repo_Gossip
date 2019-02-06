@@ -1,0 +1,25 @@
+<html>
+  <body>
+    <!-- ... -->
+  <div class='conteneur'>
+    <%= form_tag url_for(action: 'create'), method: "post" do %>
+
+      <%= label_tag 'Title' %>
+      <%= text_field_tag 'titre', @potin.title, class: 'form-control', placeholder: "Title" %>
+      <br /> <br />
+
+      <%= label_tag 'Contenu' %>
+      <%= text_area_tag 'content', @potin.content, class: 'form-control', placeholder: "Contenu" %>
+      <br /> <br />
+
+      <%= label_tag 'Autheur' %>
+      <%=select_tag 'autheur', options_for_select(@users.collect{ |user| [user.f_name] }), class: 'form-control', placeholder: "Autheur" %>
+      <br /> <br />
+
+      <%= submit_tag "Create Post" %>
+
+    <% end %>
+
+    <!-- ... -->
+  </body>
+</html>
