@@ -1,3 +1,17 @@
+<div class='container'>
+    <% if @potin.errors.any? %>
+    <div class="alert alert-danger" role="alert">
+      <p>Nous n'avons pas réussi à créer le potin pour la (ou les) raison(s) suivante(s) :</p>
+      <ul>
+        <% @potin.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+</div>
+
+
 <html>
   <body>
     <!-- ... -->
@@ -6,17 +20,17 @@
 
       <%= label_tag 'Title' %>
       <%= text_field_tag 'titre', @potin.title, class: 'form-control', placeholder: "Title" %>
-      <br /> <br />
+      <br>
 
       <%= label_tag 'Contenu' %>
       <%= text_area_tag 'content', @potin.content, class: 'form-control', placeholder: "Contenu" %>
-      <br /> <br />
+      <br>
 
-      <%= label_tag 'Autheur' %>
-      <%=select_tag 'autheur', options_for_select(@users.collect{ |user| [user.f_name] }), class: 'form-control', placeholder: "Autheur" %>
-      <br /> <br />
+      <%= label_tag 'Auteur' %>
+      <%=select_tag 'auteur', options_for_select(@users.map{ |user| [user.f_name, user.id] }), class: 'form-control', placeholder: "Autheur" %>
+      <br>
 
-      <%= submit_tag "Create Post" %>
+      <p class="commit text-center"><%= submit_tag "Créer le potin", class: "btn btn-primary"%></p>
 
     <% end %>
 
