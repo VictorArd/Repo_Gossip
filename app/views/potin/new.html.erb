@@ -1,9 +1,4 @@
 
-
-
-<html>
-  <body>
-
   <div class='container'>
       <% if @potin.errors.any? %>
       <div class="alert alert-danger" role="alert">
@@ -35,13 +30,9 @@
       <br>
 
       <%= label_tag 'Ville' %>
-      <%=select_tag 'city', options_for_select(@cities.map{ |c| [c.name,  c.id] }), class: 'form-control', placeholder: "Ville" %>
+      <%=select_tag 'city', options_for_select(@cities.map{ |city| [city.name,  city.id] }), class: 'form-control', placeholder: "Ville" %>
       <br>
 
       <p class="commit text-center"><%= submit_tag "Créer le potin", class: "btn btn-primary"%></p>
 
     <% end %>
-
-    <!-- ... -->
-  </body>
-</html>

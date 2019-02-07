@@ -1,0 +1,14 @@
+
+    <!-- ... -->
+  <div class='conteneur'>
+    <%= form_tag url_for(action: 'create'), method: "post" do %>
+
+            <br><br>
+
+      <%= label_tag 'Commentaire' %>
+      <%= text_field_tag 'comment', @comment.content, class: 'form-control', placeholder: "Commentaire" %>
+      <br>
+      <p class="commit text-center"><%= submit_tag "Ajouter un commentaire", class: "btn btn-primary"%></p>
+
+    <% end %>
+    <!-- ... -->

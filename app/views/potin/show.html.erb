@@ -10,5 +10,9 @@
 	<%= link_to "Accéder à la ville", city_path(@potin.user.city_id), :class => "btn btn-primary" %><br>
 	<p>Auteur: <%= @potin.user.f_name %></p>
 	<%= link_to "Auteur", user_path(@potin.user_id), :class => "btn btn-primary" %>
+	<br><br><br>
+	<%= link_to "Editer", edit_potin_path(@potin.id), :class => "btn btn-warning" %>
+	<%= link_to "Supprimer", potin_path(@potin.id), :class => "btn btn-danger", method: :DELETE, :data => {:confirm => 'Êtes vous sur ?'} %>
+
 
 </div>

@@ -14,6 +14,8 @@
 					<div class="card-body">
 						<p class="card-title"><strong>Title : </strong><%= gossip.title %>
 						<p class="card-text"><strong>Content : </strong><%= gossip.content %>
+							<br><br>
+						<%=link_to "Revenir à l'auteur", :back, :class => "btn btn-info" %>
 					</div>
 				</div>
 				<% end %>

@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   #get 'user/:id', to: 'user#show', as: 'user'
 
   resources :potin do
-    resources :comments
+    resources :comment
   end
 
   resources :user

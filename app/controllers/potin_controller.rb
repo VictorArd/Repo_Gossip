@@ -1,6 +1,6 @@
 class PotinController < ApplicationController
   def show
-  	@potin = Potin.find(params[:id].to_i)
+  	@potin = Potin.find(params[:id])
     @city = City.all
   end
 
@@ -10,7 +10,6 @@ class PotinController < ApplicationController
     @users = User.all
     @cities = City.all
     @potin = Potin.new
-
   end
 
   def create
@@ -28,4 +27,34 @@ class PotinController < ApplicationController
       render :new
     end
   end
+
+  def edit
+    @potin = Potin.find(params[:id])
+  end
+
+  def update
+    @potin = Potin.find(params[:id])
+    potin_params = params.require(:potin).permit(:title, :content)
+    if @potin.update(potin_params) # essaie de sauvegarder en base @gossip
+      # si ça marche, il redirige vers la page d'index du site
+      flash[:notice] = "Ton gossip a bien été modifié !"
+      redirect_to root_path
+    else
+      # sinon, il render la view new (qui est celle sur laquelle on est déjà)
+      render :edit
+    end
+  end
+
+  def destroy
+    @potin = Potin.find(params[:id])
+    if @potin.destroy # essaie de sauvegarder en base @gossip
+      # si ça marche, il redirige vers la page d'index du site
+      flash[:notice] = "Ton gossip a bien été supprimé !"
+      redirect_to root_path
+    else
+      # sinon, il render la view new (qui est celle sur laquelle on est déjà)
+      render :show
+    end
+  end
+
 end

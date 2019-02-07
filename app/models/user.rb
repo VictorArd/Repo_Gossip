@@ -13,4 +13,3 @@ class User < ApplicationRecord
     uniqueness: true,
     format: { with: /\A[^@\s]+@([^@\s]+\.)+[^@\s]+\z/, message: "Votre email n'est pas correct" }
 end
- 
