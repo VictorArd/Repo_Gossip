@@ -1,8 +1,4 @@
 class StaticPagesController < ApplicationController
-  
-  def accueil
-    @potins = Potin.all
-  end
 
   def team
   end

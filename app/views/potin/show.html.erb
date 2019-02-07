@@ -1,7 +1,7 @@
 <div class="container-fluid mt-5 text-center">
-	<h1><%= @potin.title %></h1>
-	<p><%= @potin.content %></p>
-
+	<h1>Titre: <%= @potin.title %></h1>
+	<p>Contenu: <%= @potin.content %></p>
+	<p>Ville: <%= @potin.user.city.name %></p>
 	<%= link_to "Auteur", user_path(@potin.user_id), :class => "btn btn-primary" %>
-</div>
 
+</div>

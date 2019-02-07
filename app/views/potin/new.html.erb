@@ -34,6 +34,10 @@
       <%=select_tag 'auteur', options_for_select(@users.map{ |user| [user.f_name, user.id] }), class: 'form-control', placeholder: "Autheur" %>
       <br>
 
+      <%= label_tag 'Ville' %>
+      <%=select_tag 'city', options_for_select(@cities.map{ |c| [c.name,  c.id] }), class: 'form-control', placeholder: "Ville" %>
+      <br>
+
       <p class="commit text-center"><%= submit_tag "Créer le potin", class: "btn btn-primary"%></p>
 
     <% end %>
