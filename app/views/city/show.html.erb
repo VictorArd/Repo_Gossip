@@ -1,3 +1,23 @@
-<div class="container-fluid mt-5 text-center">
-	<h2>Nom de la ville: <%= @city.name %></h2>
+<div class="container text-center">
+
+	<div class="container-fluid mt-5 text-center">
+		<h2>Nom de la ville: <%= @city.name %></h2>
+	</div>
+
+	<br><br>
+
+	<div class="card-columns text-center">
+		<% @city.users.each do |user| %>
+			<% user.potins.each do |gossip| %>
+
+				<div class="card" style="width: 18rem;">
+					<div class="card-body">
+						<p class="card-title"><strong>Title : </strong><%= gossip.title %>
+						<p class="card-text"><strong>Content : </strong><%= gossip.content %>
+					</div>
+				</div>
+				<% end %>
+			<% end %>
+	</div>
+
 </div>

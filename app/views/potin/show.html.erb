@@ -1,7 +1,14 @@
 <div class="container-fluid mt-5 text-center">
-	<h1>Titre: <%= @potin.title %></h1>
+	<h3>Page de potin n°<%= @potin.id %></h3>
+</div>
+
+<br>
+<div class="container-fluid mt-5 text-center">
+	<h2>Titre: <%= @potin.title %></h2>
 	<p>Contenu: <%= @potin.content %></p>
 	<p>Ville: <%= @potin.user.city.name %></p>
+	<%= link_to "Accéder à la ville", city_path(@potin.user.city_id), :class => "btn btn-primary" %><br>
+	<p>Auteur: <%= @potin.user.f_name %></p>
 	<%= link_to "Auteur", user_path(@potin.user_id), :class => "btn btn-primary" %>
 
 </div>

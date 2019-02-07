@@ -4,4 +4,6 @@
 	<p>Email : <%= @user.email %></p>
 	<p>Àge : <%= @user.age %> ans</p>
 	<p>Ville : <%= @user.city.name %></p>
+	<%= link_to "Accéder à la ville", city_path(@user.city_id), :class => "btn btn-primary" %>
+
 </div>
