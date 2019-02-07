@@ -2,22 +2,6 @@
 
 <div class="container text-center">
 
-	<!-- 
-
-		Affichez l'alert si Fonctionnel
-		
-		<% #if --------------- @potin %> 
-
-		<div class="alert alert-success alert-dismissible fade show" role="alert">
-			<p>L'opération a été un succès</p>
-			<button type="button" class="close" data-dismiss="alert" aria-label="Close">
-				<span aria-hidden="true">&times;</span>
-			</button>
-		</div>
-		<% #end %>
-
-	-->
-
   <h1>Bienvenue sur notre site Gossip!</h1>
   <p>Tous nos Gossip sont dans la liste ci dessous classé par auteur et par titre</p>
 
@@ -30,17 +14,12 @@
 	    			<p class="card-text"><%= link_to gossip.title, potin_path(gossip.id), :class => "link"%></p>
 	    		</div>
   			</div>
-  		
+
   		<% end %>
   </div>
 
 	<div>
-	<p class="text-center"><%= link_to "Créer un potin !", new_potin_path, :class => "btn btn-primary"%></p>
+	<p class="text-center"><%= link_to "Créer un potin !", new_potin_path, :class => "btn btn-success"%></p>
 	</div>
 
-
-
-
 </div>
-
-
