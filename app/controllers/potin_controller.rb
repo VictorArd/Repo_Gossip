@@ -17,7 +17,7 @@ class PotinController < ApplicationController
     puts params
     @users = User.all
     @cities = City.all
-    @potin = Potin.new(title: params[:titre], content: params[:content], user: User.find(params[:auteur]), city: City.find(params[:city]))
+    @potin = Potin.new(title: params[:title], content: params[:content], user: User.find(params[:author]))
     if @potin.save # essaie de sauvegarder en base @gossip
       # si ça marche, il redirige vers la page d'index du site
       flash[:notice] = "Ton gossip a bien été créé !"

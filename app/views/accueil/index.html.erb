@@ -6,12 +6,12 @@
   <p>Tous nos Gossip sont dans la liste ci dessous classé par auteur et par titre</p>
 
 	<div class="card-columns">
-			<% @potins.each do |gossip| %>
+			<% @potins.each do |potin| %>
 
 	      <div class="card" style="width: 18rem;">
 	      	<div class="card-body">
-	    			<h5 class="card-title"><%= gossip.user.f_name + ' ' + gossip.user.l_name + " : " %></h5>
-	    			<p class="card-text"><%= link_to gossip.title, potin_path(gossip.id), :class => "link"%></p>
+	    			<h5 class="card-title"><%= potin.user.f_name + ' ' + potin.user.l_name + " : " %></h5>
+	    			<p class="card-text"><%= link_to potin.title, potin_path(potin.id), :class => "link"%></p>
 	    		</div>
   			</div>
 
