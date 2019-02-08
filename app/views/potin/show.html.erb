@@ -13,6 +13,20 @@
 	<br><br><br>
 	<%= link_to "Editer", edit_potin_path(@potin.id), :class => "btn btn-warning" %>
 	<%= link_to "Supprimer", potin_path(@potin.id), :class => "btn btn-danger", method: :DELETE, :data => {:confirm => 'Êtes vous sur ?'} %>
+</div>
 
+	<br>
 
+		<div class="container float-center p-2">
+			<%= link_to "Ajouter un commentaire !", new_potin_comment_path(@potin.id), :class => "btn btn-info" %>
+		</div>
+
+<div class="container float-center rounded-top border shadow p-2">
+<p class="font-weight-light">Commentaires:</p>
+</div>
+<div class="container float-center rounded-bottom border shadow p-4 mb-4 bg-white">
+<p class="font-weight-bold">Auteur: </p>
+<p class="p-2"><%=  %></p>
+<p class="font-weight-bold">Commentaire: </p>
+<p class="p-2">Blabla</p>
 </div>

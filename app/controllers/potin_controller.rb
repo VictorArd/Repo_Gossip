@@ -20,10 +20,11 @@ class PotinController < ApplicationController
     @potin = Potin.new(title: params[:title], content: params[:content], user: User.find(params[:author]))
     if @potin.save # essaie de sauvegarder en base @gossip
       # si ça marche, il redirige vers la page d'index du site
-      flash[:notice] = "Ton gossip a bien été créé !"
+      flash[:success] = "Ton gossip a bien été créé !"
       redirect_to root_path
     else
       # sinon, il render la view new (qui est celle sur laquelle on est déjà)
+      flash[:danger] = "Une erreur à survenu, recommencez"
       render :new
     end
   end
